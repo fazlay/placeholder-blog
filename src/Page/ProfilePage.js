@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 
 const ProfilePage = () => {
   let params = useParams();
+  console.log(params);
   let url = `https://jsonplaceholder.typicode.com/users/${params.userprofile}`;
   useEffect(() => {
     fetch(url)
