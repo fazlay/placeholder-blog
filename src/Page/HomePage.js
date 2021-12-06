@@ -1,8 +1,8 @@
-import React from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useEffect } from "react";
+
 import AllBlogPosts from "../Component/AllBlogPosts";
 import useAuth from "../hook/useAuth";
-import Header from "./Header";
+
 
 const HomePage = () => {
   const {getUserInfo,newUser} = useAuth()

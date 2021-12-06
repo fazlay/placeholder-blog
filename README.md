@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+#BLOG XPRESS APP - FOUND ALL NEWS IN ONE PLACE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Link Of the Project [BLOG XPRESS](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
