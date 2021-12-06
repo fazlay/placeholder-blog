@@ -1,6 +1,13 @@
 #BLOG XPRESS APP - FOUND ALL NEWS IN ONE PLACE
 
-Live Link Of the Project [BLOG XPRESS](https://github.com/facebook/create-react-app).
+Live Link Of the Project [BLOG XPRESS](https://nostalgic-yonath-e18514.netlify.app/)
+
+## To run this repo in your local env follow below steps
+
+### `CLone the git `
+### `yarn `
+### `yarn start`
+
 
 ## Available Scripts
 
