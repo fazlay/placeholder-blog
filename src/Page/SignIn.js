@@ -1,7 +1,9 @@
 import React from "react";
 import useAuth from "../hook/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  let navigate = useNavigate();
     const {locSignIn,newUser,getUserInfo} =useAuth()
   let userInfo = {
     email: "",
@@ -15,7 +17,9 @@ const SignIn = () => {
   
     locSignIn(userInfo)
     getUserInfo()
+    navigate("/")
     e.preventDefault();
+  
   };
  
   return (
@@ -46,7 +50,7 @@ const SignIn = () => {
             onChange={handleChange}
           />
         </span>
-        <button className="bg-green-700 font-bold text-white px-8 py-2" type="submit">Submit info</button>
+        <button className="bg-green-700 font-bold text-white px-8 py-2" type="submit" >Submit info</button>
       </form>
     </div>
   );

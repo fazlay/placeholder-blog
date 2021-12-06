@@ -1,10 +1,13 @@
 import React from "react";
 import useAuth from "../hook/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const SignOut = () => {
+  let navigate = useNavigate();
   const {locSignOut}= useAuth()
   const handleSignOut = () => {
     locSignOut()
+    navigate("/signin")
   };
 
   return (

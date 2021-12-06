@@ -17,8 +17,8 @@ function App() {
       <Header></Header>
         <Routes>
         
-          <Route path="/" element={<HomePage></HomePage>} />
-          <Route path="home" element={<HomePage></HomePage>} />
+          <Route path="/" element={<PrivateRoute><HomePage></HomePage></PrivateRoute>} />
+          <Route path="home" element={<PrivateRoute><HomePage></HomePage></PrivateRoute>} />
           <Route
             path="home/:userprofile"
             element={

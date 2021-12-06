@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 
+
+
 const useLocalStorage = () => {
     const [newUser, setNewUser] = useState({
         email:'',
         password:''
     })
+   
 
     const locSignIn=(userInfo
         )=>{
 
         window.localStorage.setItem("person", JSON.stringify(userInfo));
+  
     }
     const locSignOut=()=>{
 
