@@ -1,6 +1,8 @@
 import React from "react";
+import useAuth from "../hook/useAuth";
 
 const SignIn = () => {
+    const {locSignIn,newUser,getUserInfo} =useAuth()
   let userInfo = {
     email: "",
     password: "",
@@ -10,17 +12,23 @@ const SignIn = () => {
     console.log(userInfo);
   };
   const handleSubmite = (e) => {
-    console.log(userInfo);
-    window.localStorage.setItem("person", JSON.stringify(userInfo));
+  
+    locSignIn(userInfo)
+    getUserInfo()
     e.preventDefault();
   };
+ 
   return (
     <div>
+     
       <form onSubmit={handleSubmite}>
-        <h1>THIS IS SIGN IN FORM</h1>
-        <span>
+     
+        <h1 className="text-2xl font-bold py-3">Sign In Here</h1>
+        <span className="text-red-700"> *Enter any Email and Password </span>
+        <span className="py-3 block">
           Enter your Email : {"  "}
           <input
+           placeholder=" Email"
             type="email"
             name="email"
             className="border-2"
@@ -28,16 +36,17 @@ const SignIn = () => {
           />
         </span>
         <br />
-        <span className="mt-3">
-          Enter your Email : {"  "}
+        <span className="mt-3" className="pb-9 block">
+          Enter your Password : {"  "}
           <input
+          placeholder=" Passowrd"
             type="password"
             name="password"
             className="border-2"
             onChange={handleChange}
           />
         </span>
-        <button type="submit">Submit info</button>
+        <button className="bg-green-700 font-bold text-white px-8 py-2" type="submit">Submit info</button>
       </form>
     </div>
   );

@@ -17,7 +17,9 @@ const AllBlogPosts = () => {
 
   return (
     <div>
-      <h1>this is All Blog POST</h1>
+      <h1 className="text-4xl text-red-900 underline font-extrabold pt-4"> - - BOLG XPRESS - -</h1>
+      
+
       {posts.map((post) => (
         <SinglePost key={post.id} post={post} users={users}></SinglePost>
       ))}
